@@ -99,5 +99,5 @@ help() {
 
 
 
-# $* allo to call functions from the CLI
+# $* allows to call functions from the CLI
 $*
