@@ -1,8 +1,8 @@
 @ECHO OFF
 
-REM Si utilisation d'un RAMDISK, positionner TEMP comme ci dessous
-REM SET TEMP=F:\TEMP
-SET TEMP=R:\TEMP
+REM if Eclipse TEMP directory is not default one (RAMDISK or other), set TEMP below
+REM SET TEMP=R:\TEMP
+
 
 ECHO Default Clean
 IF EXIST "%TEMP%\ImageResourceGenerator*" DEL "%TEMP%\ImageResourceGenerator*" /F /Q
