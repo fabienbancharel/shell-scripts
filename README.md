@@ -4,7 +4,7 @@ Various shell scripts for Eclipse, Docker, Jenkins
 ### Docker
 do.sh : 
 
-To clean containers, images, volumes, from any directory : /home/vagrant/do.sh cleanall
+To clean containers, images, volumes, from any directory : /home/vagrant/do.sh cleanall (prefer "docker system prune" since 17.03)
 
 
 From a directory containing Dockerfile :
