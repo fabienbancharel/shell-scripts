@@ -1,5 +1,5 @@
 @ECHO ON
-echo NETTOYAGE FICHIERS TEMP ECLIPSE (logs, fichiers TEMPS DEV MODE GWT)
+echo Clean ECLIPSE Temp files (logs, temp files DEV MODE GWT)
 
 CALL :DeleteLogsEclipse
 CALL :DeleteGwtTEMPFiles
@@ -7,7 +7,7 @@ GOTO :end
 
 
 :DeleteLogsEclipse
-echo NETTOYAGE FICHIERS LOGS APPLIS WEB DANS RACINE ECLIPSE
+echo Clean log files at Eclipse root
 
 del /Q *.log
 del /Q *.log.?
@@ -22,6 +22,7 @@ IF EXIST "%TEMP%\gwt*" DEL "%TEMP%\gwt*" /F /Q
 IF EXIST "%TEMP%\*_Generated_JsonEncoderDecoder_*" DEL "%TEMP%\*_Generated_JsonEncoderDecoder_*" /F /Q
 FOR /D /R %TEMP% %%x IN (gwt*) DO RMDIR /S /Q "%%x"
 FOR /D /R %TEMP% %%x IN (Jetty_127_0_0_1_8888_*) DO RMDIR /S /Q "%%x"
+FOR /D /R %TEMP% %%x IN (jetty-127.0.0.1-8888-*) DO RMDIR /S /Q "%%x"
 GOTO :EOF
 
 :full
